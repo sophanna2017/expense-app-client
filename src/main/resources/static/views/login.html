@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="form-group">
+        <label for="username">Username:</label>
+        <input
+                type="text"
+                class="form-control"
+                id="username"
+                ng-model="login.username"
+                ng-change="login.showInvalidCredentialErrorMessage=false">
+    </div>
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input
+                type="password"
+                class="form-control"
+                id="password"
+                ng-model="login.password"
+                ng-change="login.showInvalidCredentialErrorMessage=false">
+    </div>
+    <div class="form-group" ng-show="login.showInvalidCredentialErrorMessage">
+        <div id="invalid-login-credential">
+            Username / password combination not found. Please note: the password is case sensitive.
+        </div>
+    </div>
+    <input type="submit" class="btn btn-info" value="login" ng-click="login()">
+</div>

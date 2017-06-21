@@ -1,0 +1,27 @@
+<h3>Create New Expense</h3>
+
+<div class="form-input">
+    <label for="transactionDate">Transaction date:</label>
+    <input type="date"
+           id="transactionDate"
+           ng-model="expense.transactionDate"
+           ng-required>
+</div>
+
+<div class="form-input">
+    <label for="transactionDate">Amount:</label>
+    <input type="number"
+           id="amount"
+           ng-model="expense.amount"
+           ng-required>
+</div>
+
+<div class="form-input">
+    <label for="description">Description:</label>
+    <input type="text"
+           id="description"
+           ng-model="expense.description">
+</div>
+
+<input type="button" class="btn btn-info" value="Create" ng-click="createNewExpense()">
+
